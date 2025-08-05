@@ -380,8 +380,6 @@ p {
   }
 }
 
-добавлено
-
 @media (max-width: 768px) {
   .header .container {
     flex-wrap: wrap;
@@ -402,8 +400,7 @@ p {
   }
 }
 
-ещё 
-
 .footer .logo-main {
   color: white;
 }
+
