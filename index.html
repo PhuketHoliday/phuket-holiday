@@ -10,41 +10,35 @@
 <body>
 
   <!-- Хедер -->
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="tours.html" class="nav-link">Экскурсии</a>
+        <a href="about.html" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
+      </div>
     </div>
-
-    <!-- Кнопка бургера -->
-    <button class="menu-toggle" aria-label="Открыть меню">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-
-    <!-- Навигация -->
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Главная</a>
-      <a href="tours.html" class="nav-link">Экскурсии</a>
-      <a href="about.html" class="nav-link">О нас</a>
-      <a href="contacts.html" class="nav-link">Контакты</a>
-      <a href="https://t.me/phuketholiday" class="btn btn-small">Telegram</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <!-- Главный баннер -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Лучшие экскурсии на Пхукете</h1>
-    <p>Незабываемые туры по самым красивым местам Таиланда</p>
-    <a href="tours.html" class="btn btn-large">Посмотреть экскурсии</a>
-  </div>
-  <div class="hero-slider">
-    <img src="img/hero-beach.jpg" alt="Пляж Пхукета" class="slider-img">
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Лучшие экскурсии на Пхукете</h1>
+      <p>Незабываемые туры по самым красивым местам Таиланда — от джунглей до коралловых островов</p>
+      <a href="tours.html" class="btn btn-large">Посмотреть экскурсии</a>
+    </div>
+    <div class="hero-slider">
+      <!-- Локальное фото -->
+      <img src="img/hero-beach.jpg" alt="Пляж Пхукета" class="slider-img">
+    </div>
+  </section>
 
   <!-- Популярные экскурсии -->
   <section class="section">
@@ -52,7 +46,7 @@
       <h2 class="section-title">Популярные экскурсии</h2>
       <div class="cards">
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Экскурсия" class="card-img">
+          <img src="img/tour-jungle.jpg" alt="Тон Сай и Рейнджеры" class="card-img">
           <div class="card-body">
             <h3>Тон Сай и Рейнджеры</h3>
             <p>Посещение джунглей, водопадов и тропических островов. Обед включён.</p>
@@ -63,7 +57,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Яхта" class="card-img">
+          <img src="img/tour-sailing.jpg" alt="Яхта на закате" class="card-img">
           <div class="card-body">
             <h3>Яхта на закате</h3>
             <p>Романтическая прогулка на яхте с коктейлями и закатом.</p>
@@ -74,7 +68,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2" alt="Слоны" class="card-img">
+          <img src="img/tour-elephant.jpg" alt="Эко-ферма слонов" class="card-img">
           <div class="card-body">
             <h3>Эко-ферма слонов</h3>
             <p>Без цепей и шоу. Кормление, купание и общение с животными.</p>
@@ -122,65 +116,15 @@
   <!-- Футер -->
   <footer class="footer">
     <div class="container">
-  <div class="footer-logo">
-  <svg width="200" height="40" viewBox="0 0 280 60" xmlns="http://www.w3.org/2000/svg">
-    <text x="10" y="35" font-family="Montserrat, sans-serif" font-size="24" font-weight="700" fill="white">Phuket</text>
-    <text x="115" y="35" font-family="Montserrat, sans-serif" font-size="24" font-weight="700" fill="#00CBE8">Holiday</text>
-  </svg>
-   </div>
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
       <p>© 2025 PhuketHoliday. Все права защищены.</p>
       <div class="footer-links">
         <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
       </div>
     </div>
   </footer>
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.nav');
 
-  menuToggle?.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    menuToggle.classList.toggle('active');
-  });
-
-  // Закрыть меню при клике на ссылку
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      menuToggle.classList.remove('active');
-    });
-  });
-</script>
-<script>
-  // Анимация при прокрутке
-  const fadeElements = document.querySelectorAll('.fade-up');
-
-  const fadeInOnScroll = () => {
-    fadeElements.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const elementVisible = 150;
-
-      if (elementTop < window.innerHeight - elementVisible) {
-        el.classList.add('visible');
-      }
-    });
-  };
-
-  window.addEventListener('scroll', fadeInOnScroll);
-  window.addEventListener('load', fadeInOnScroll); // На случай, если блок в начале
-</script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
