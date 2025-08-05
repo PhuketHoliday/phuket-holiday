@@ -197,18 +197,19 @@ function sendToTelegram() {
   })
   .then(() => {
     // Успешно отправлено — открываем Telegram
-    window.open('https://t.me/phuketholiday', '_blank');
+    window.open('https://t.me/PhuketHolidayBot', '_blank');
   })
   .catch(err => {
     // Если ошибка — просто открываем чат
     console.error('Ошибка отправки:', err);
-    window.open('https://t.me/phuketholiday', '_blank');
+    window.open('https://t.me/PhuketHolidayBot', '_blank');
   });
 }
 </script>
     <!-- конец -->
 </body>
 </html>
+
 
 
 
