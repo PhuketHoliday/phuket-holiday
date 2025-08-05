@@ -149,9 +149,28 @@
     });
   });
 </script>
+<script>
+  // Анимация при прокрутке
+  const fadeElements = document.querySelectorAll('.fade-up');
+
+  const fadeInOnScroll = () => {
+    fadeElements.forEach(el => {
+      const elementTop = el.getBoundingClientRect().top;
+      const elementVisible = 150;
+
+      if (elementTop < window.innerHeight - elementVisible) {
+        el.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', fadeInOnScroll);
+  window.addEventListener('load', fadeInOnScroll); // На случай, если блок в начале
+</script>
 </body>
 
 </html>
+
 
 
 
