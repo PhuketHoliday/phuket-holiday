@@ -127,9 +127,9 @@
     <h2 class="section-title">Остались вопросы?</h2>
     <p>Напишите нам — поможем с выбором экскурсии и забронируем дату.</p>
     <form class="contact-form">
-      <input type="text" placeholder="Ваше имя" required />
-      <input type="text" placeholder="Телефон или @ник в Telegram" required />
-      <textarea placeholder="Какая экскурсия вас интересует?"></textarea>
+      <input type="text" id="name" placeholder="Ваше имя" required />
+      <input type="text" id="contact" placeholder="Телефон или @ник в Telegram" required />
+      <textarea id="message" placeholder="Какая экскурсия вас интересует?"></textarea>
       <button type="button" class="btn btn-large" onclick="sendToTelegram()">
       Написать в Telegram
     </button>
@@ -207,6 +207,7 @@ function sendToTelegram() {
     <!-- конец -->
 </body>
 </html>
+
 
 
 
