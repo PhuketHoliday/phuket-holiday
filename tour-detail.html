@@ -65,22 +65,30 @@
 <body>
 
   <!-- Хедер -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">
-        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Главная</a>
-        <a href="tours.html" class="nav-link">Экскурсии</a>
-        <a href="about.html" class="nav-link">О нас</a>
-        <a href="contacts.html" class="nav-link">Контакты</a>
-      </nav>
-      <div class="header-contact">
-        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
-      </div>
+ <header class="header">
+  <div class="container">
+    <!-- Логотип -->
+    <div class="logo">
+      <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
     </div>
-  </header>
+
+    <!-- Кнопка бургер-меню -->
+    <button class="menu-toggle" aria-label="Открыть меню">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Навигация -->
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Главная</a>
+      <a href="tours.html" class="nav-link">Экскурсии</a>
+      <a href="about.html" class="nav-link">О нас</a>
+      <a href="contacts.html" class="nav-link">Контакты</a>
+      <a href="https://t.me/phuketholiday" class="btn btn-small">Telegram</a>
+    </nav>
+  </div>
+</header>
 
   <!-- Баннер с фото экскурсии -->
   <section class="hero">
@@ -185,3 +193,4 @@
 </body>
 
 </html>
+
