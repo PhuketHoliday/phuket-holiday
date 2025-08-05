@@ -107,7 +107,7 @@
     </div>
   </section>
 
-  <!-- Форма связи -->
+  <!-- Форма связи оригинал 
   <section class="section">
     <div class="container">
       <h2 class="section-title">Остались вопросы?</h2>
@@ -120,7 +120,25 @@
       </form>
     </div>
   </section>
+ ---> 
+<!-- Форма связи -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Остались вопросы?</h2>
+    <p>Напишите нам — поможем с выбором экскурсии и забронируем дату.</p>
 
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Ваше имя" required />
+      <input type="text" id="contact" placeholder="Телефон или @ник в Telegram" required />
+      <textarea id="message" placeholder="Какая экскурсия вас интересует?"></textarea>
+    </form>
+
+    <button type="button" class="btn btn-large" onclick="sendToTelegram()">
+      Написать в Telegram
+    </button>
+  </div>
+</section>
+  
   <!-- Футер -->
   <footer class="footer">
     <div class="container">
@@ -153,9 +171,45 @@
       });
     });
   </script>
+  <--Отправка в ТГ -->
+<script>
+function sendToTelegram() {
+  const name = document.getElementById('name').value;
+  const contact = document.getElementById('contact').value;
+  const message = document.getElementById('message').value;
 
+  // Текст сообщения
+  const text = `📩 *Новая заявка!*\n\n*Имя:* ${name}\n*Контакт:* ${contact}\n*Сообщение:* ${message}`;
+
+  // Твой токен и chat_id
+  const token = 'AAF1PiDrbRatASacwkNMg-FERpTWpofL_uU';  // ← Замени на свой
+  const chat_id = '7129284011';  // ← Замени на свой
+
+  // Отправляем запрос
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      chat_id: chat_id,
+      text: text,
+      parse_mode: 'Markdown'
+    })
+  })
+  .then(() => {
+    // Успешно отправлено — открываем Telegram
+    window.open('https://t.me/phuketholiday', '_blank');
+  })
+  .catch(err => {
+    // Если ошибка — просто открываем чат
+    console.error('Ошибка отправки:', err);
+    window.open('https://t.me/phuketholiday', '_blank');
+  });
+}
+</script>
+    <!-- конец -->
 </body>
 </html>
+
 
 
 
