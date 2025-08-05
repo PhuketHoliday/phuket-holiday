@@ -183,12 +183,13 @@ p {
   display: block;
 }
 
-/* Карточки */
+/* Карточки — исправлено: центрирование и адаптив */
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 25px;
   justify-content: center;
+  padding: 0;
 }
 
 .card {
@@ -196,8 +197,10 @@ p {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   transition: all 0.4s ease;
+  margin: 0 auto;
 }
 
 .card:hover {
@@ -286,7 +289,7 @@ p {
 }
 
 .footer .logo-main {
-  color: white; /* Критично: белый цвет для видимости на тёмном фоне */
+  color: white; /* Важно: белый цвет для видимости */
 }
 
 .footer .logo-accent {
@@ -351,7 +354,9 @@ p {
     display: none;
   }
   .card {
-    width: 100%;
+    width: 90%;
+    max-width: 350px;
+    margin: 0 auto 20px;
   }
   .section {
     padding: 50px 0;
