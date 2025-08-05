@@ -365,3 +365,26 @@ p {
     flex-direction: column;
   }
 }
+/* Улучшенный блок "О нас" */
+.about-hero {
+  text-align: center;
+  padding: 80px 20px 50px;
+  background: #f8f9fa;
+  margin-bottom: 60px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  color: #0A2A66;
+  margin-bottom: 20px;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-weight: 400;
+}
+/* Улучшенный блок "О нас" конец */
