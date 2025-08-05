@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакты — PhuketHoliday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px 0;
+    }
+    .info-block {
+      flex: 1;
+      min-width: 300px;
+    }
+    .info-block h3 {
+      color: #0A2A66;
+      margin-bottom: 15px;
+    }
+    .info-block p {
+      margin-bottom: 10px;
+    }
+    .contact-links a {
+      display: block;
+      margin: 10px 0;
+      color: #00CBE8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+    .map {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .contact-form {
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="tours.html" class="nav-link">Экскурсии</a>
+        <a href="about.html" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link active">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Баннер -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Свяжитесь с нами</h1>
+      <p>Есть вопросы? Напишите — поможем с выбором экскурсии и забронируем дату</p>
+    </div>
+  </section>
+
+  <!-- Контактная информация -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-info">
+        <!-- Левый блок: контакты -->
+        <div class="info-block">
+          <h3>Наши контакты</h3>
+          <div class="contact-links">
+            <p>💬 Напишите нам в мессенджеры:</p>
+            <a href="https://t.me/phuketholiday" target="_blank">Telegram: @phuketholiday</a>
+            <a href="https://wa.me/66999999999" target="_blank">WhatsApp: +66 99 999 9999</a>
+            <p>📧 Email: info@phuketholiday.ru</p>
+            <p>📱 Работаем ежедневно с 8:00 до 22:00 (по местному времени, Пхукет)</p>
+            <p>📍 Офис: 123 Phuket Town, Muang, Phuket 83000, Thailand</p>
+          </div>
+        </div>
+
+        <!-- Правый блок: форма -->
+        <div class="info-block">
+          <h3>Написать нам</h3>
+          <form class="contact-form" action="https://t.me/phuketholiday" target="_blank">
+            <label>Ваше имя</label>
+            <input type="text" name="name" required />
+
+            <label>Telegram (@ник) или WhatsApp</label>
+            <input type="text" name="contact" required />
+
+            <label>Сообщение (какая экскурсия интересует?)</label>
+            <textarea name="message" rows="4" placeholder="Здравствуйте! Хотим забронировать яхту на закате на 2 человек..."></textarea>
+
+            <button type="submit" class="btn btn-large">Отправить в Telegram</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Карта -->
+      <h3 style="margin: 40px 0 15px;">Мы на карте</h3>
+      <p>Наш офис находится в центре Пхукет-тауна, рядом с рынком и пристанью.</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.998484575575!2d98.3938253748225!3d7.880770292157312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305037486a645b01%3A0x424d5d3a7a1f4e0!2sPhuket%20Town%2C%20Thailand!5e0!3m2!1sen!2sru!4v1700000000000!5m2!1sen!2sru" 
+        class="map" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <p>© 2025 PhuketHoliday. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

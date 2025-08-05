@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>О нас — PhuketHoliday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-hero {
+      background: linear-gradient(rgba(0, 43, 102, 0.8), rgba(0, 43, 102, 0.8)), url('https://source.unsplash.com/random/1600x600/?phuket,team') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .about-hero h1 {
+      color: white;
+      font-size: 2.5rem;
+    }
+    .about-hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .advantages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 50px 0;
+    }
+    .advantage {
+      flex: 1;
+      min-width: 250px;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .advantage h3 {
+      color: #00CBE8;
+      margin-bottom: 15px;
+    }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 50px 0;
+    }
+    .team-member {
+      text-align: center;
+      max-width: 220px;
+    }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #00CBE8;
+    }
+    .team-member h3 {
+      margin: 15px 0 5px;
+      color: #0A2A66;
+    }
+    .team-member p {
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="tours.html" class="nav-link">Экскурсии</a>
+        <a href="about.html" class="nav-link active">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главный экран -->
+  <section class="about-hero">
+    <h1>Мы — PhuketHoliday</h1>
+    <p>Ваш личный гид на Пхукете с 2020 года. Более 1500 довольных туристов из России и СНГ.</p>
+  </section>
+
+  <!-- Основной контент -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Кто мы и почему туристы нам доверяют</h2>
+      <p>Мы — не просто туроператор. Мы живём на Пхукете уже 5 лет и знаем каждый пляж, джунгли и скрытый водопад. Наша цель — помочь вам увидеть Таиланд по-настоящему, без шаблонов и толп.</p>
+      
+      <p>Каждая экскурсия создаётся с заботой о комфорте, безопасности и впечатлениях. Мы говорим на русском, помогаем с трансферами, подбираем туры под ваш бюджет и настроение.</p>
+
+      <h2 style="text-align: center; margin: 40px 0 20px;">Наши преимущества</h2>
+      <div class="advantages">
+        <div class="advantage">
+          <h3>✅ Локальные знания</h3>
+          <p>Мы живём здесь и знаем, где лучше снорклинг, где — вкуснее морепродукты, а где — можно остаться одному с природой.</p>
+        </div>
+        <div class="advantage">
+          <h3>💬 Поддержка на русском</h3>
+          <p>Связь в Telegram, помощь 24/7, никаких языковых барьеров — вы всегда на связи с нами.</p>
+        </div>
+        <div class="advantage">
+          <h3>💰 Честные цены</h3>
+          <p>Без наценок посредников. Вы платите за тур, а не за рекламу в Google.</p>
+        </div>
+      </div>
+
+      <h2 style="text-align: center; margin: 50px 0 20px;">Наша команда</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+        Мы — не большая компания с офисом, а дружная команда энтузиастов. Каждый из нас — гид, капитан или организатор.
+      </p>
+
+      <div class="team">
+        <div class="team-member">
+          <img src="https://source.unsplash.com/random/200x200/?man,beard,thailand" alt="Алексей">
+          <h3>Алексей</h3>
+          <p>Основатель, гид с 2020 года</p>
+        </div>
+        <div class="team-member">
+          <img src="https://source.unsplash.com/random/200x200/?woman,smile,thailand" alt="Марина">
+          <h3>Марина</h3>
+          <p>Координатор, поддержка 24/7</p>
+        </div>
+        <div class="team-member">
+          <img src="https://source.unsplash.com/random/200x200/?captain,boat" alt="Капитан Тони">
+          <h3>Тони</h3>
+          <p>Капитан яхты, 10 лет опыта</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 50px 0;">
+        <h2>Готовы к приключениям?</h2>
+        <p>Выберите экскурсию и отправляйтесь в путешествие с надёжным проводником.</p>
+        <a href="tours.html" class="btn btn-large">Посмотреть все туры</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <p>© 2025 PhuketHoliday. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

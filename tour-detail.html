@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Яхта на закате — PhuketHoliday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .tour-info {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+    .tour-info div {
+      background: #f0f8ff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #0A2A66;
+    }
+    .included {
+      display: flex;
+      gap: 40px;
+      margin: 30px 0;
+    }
+    .included ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .included ul li:before {
+      content: "✓";
+      color: #00CBE8;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .excluded ul li:before {
+      content: "✗";
+      color: #d9534f;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    .booking-form {
+      max-width: 500px;
+      margin-top: 30px;
+    }
+    .booking-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .booking-form input,
+    .booking-form select,
+    .booking-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="tours.html" class="nav-link">Экскурсии</a>
+        <a href="about.html" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Баннер с фото экскурсии -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Яхта на закате</h1>
+      <p>Романтическая прогулка с коктейлями, шампанским и лучшими видами Пхукета</p>
+    </div>
+    <div class="hero-slider">
+      <img src="https://source.unsplash.com/random/1200x600/?sunset,sailboat" alt="Яхта на закате" class="slider-img">
+    </div>
+  </section>
+
+  <!-- Информация -->
+  <section class="section">
+    <div class="container">
+      <div class="tour-info">
+        <div>💰 от 2200 ₽</div>
+        <div>⏱️ 3 часа</div>
+        <div>👥 до 8 человек</div>
+        <div>📍 Пхукет Таун → Андаманское море</div>
+      </div>
+
+      <h2>Описание экскурсии</h2>
+      <p>Проведите вечер на борту частной яхты, уплывая в море к закату. Вас ждёт:</p>
+      <ul>
+        <li>Выезд в 17:00 от пристани в Чалонге</li>
+        <li>Прогулка вдоль побережья Пхукета</li>
+        <li>Фото на фоне заката</li>
+        <li>Бокал шампанского или коктейль в подарок</li>
+        <li>Музыка, уютная атмосфера</li>
+        <li>Возвращение в 20:00</li>
+      </ul>
+
+      <h2>Что включено</h2>
+      <div class="included">
+        <div class="included-list">
+          <ul>
+            <li>Аренда яхты</li>
+            <li>Капитан и обслуживание</li>
+            <li>Один напиток на человека</li>
+            <li>Спасательные жилеты</li>
+            <li>Трансфер от отеля (в черте Пхукет Тауна)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Что не включено</h2>
+      <div class="excluded">
+        <ul>
+          <li>Дополнительные напитки</li>
+          <li>Еда (можно заказать доплатой — 500 ₽ с человека)</li>
+          <li>Чаевые капитану (по желанию)</li>
+        </ul>
+      </div>
+
+      <!-- Форма бронирования -->
+      <h2>Забронировать экскурсию</h2>
+      <p>Заполните форму — и мы свяжемся с вами в Telegram для подтверждения.</p>
+
+      <form class="booking-form" action="https://t.me/phuketholiday" target="_blank">
+        <label>Дата экскурсии</label>
+        <input type="date" name="date" required />
+
+        <label>Количество человек</label>
+        <select name="people">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+
+        <label>Ваш @ник в Telegram</label>
+        <input type="text" name="tg" placeholder="@ваш_ник" required />
+
+        <label>Дополнительно (питание, пожелания)</label>
+        <textarea name="comment" placeholder="Хочу шампанское, а не коктейль..."></textarea>
+
+        <button type="submit" class="btn btn-large">Забронировать в Telegram</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <p>© 2025 PhuketHoliday. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

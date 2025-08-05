@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Экскурсии на Пхукете — PhuketHoliday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Главная</a>
+        <a href="tours.html" class="nav-link active">Экскурсии</a>
+        <a href="about.html" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+      </nav>
+      <div class="header-contact">
+        <a href="https://t.me/phuketholiday" class="btn btn-small" target="_blank">Написать в Telegram</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Баннер -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Все экскурсии на Пхукете</h1>
+      <p>Выберите идеальный тур для себя — приключения, релакс, культура и природа</p>
+    </div>
+  </section>
+
+  <!-- Фильтры (визуальные) -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Фильтры</h2>
+      <div class="filters">
+        <select class="filter-select">
+          <option>Все типы</option>
+          <option>Приключения</option>
+          <option>Релакс</option>
+          <option>Семейные</option>
+          <option>Ночные</option>
+        </select>
+        <select class="filter-select">
+          <option>Любая цена</option>
+          <option>до 1000 ₽</option>
+          <option>1000–2000 ₽</option>
+          <option>от 2000 ₽</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Список экскурсий -->
+  <section class="section">
+    <div class="container">
+      <div class="cards">
+        <!-- Экскурсия 1 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?jungle,thailand" alt="Тон Сай и Рейнджеры" class="card-img">
+          <div class="card-body">
+            <h3>Тон Сай и Рейнджеры</h3>
+            <p>Прогулка по джунглям, посещение тайского поселения, кокосы, обед включён.</p>
+            <div class="card-footer">
+              <strong>от 1500 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 2 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?waterfall,forest" alt="Кхао Лак" class="card-img">
+          <div class="card-body">
+            <h3>Пещеры и водопады Кхао Лак</h3>
+            <p>Поездка к живописным водопадам и древним пещерам. Гид на русском.</p>
+            <div class="card-footer">
+              <strong>от 1300 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 3 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?sunset,sailboat" alt="Яхта на закате" class="card-img">
+          <div class="card-body">
+            <h3>Яхта на закате</h3>
+            <p>Романтическая прогулка с шампанским, коктейлями и видами заката.</p>
+            <div class="card-footer">
+              <strong>от 2200 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 4 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?elephant,water" alt="Эко-ферма слонов" class="card-img">
+          <div class="card-body">
+            <h3>Эко-ферма слонов</h3>
+            <p>Гуманное общение с животными: кормление, купание, фото.</p>
+            <div class="card-footer">
+              <strong>от 1800 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 5 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?beach,food" alt="Обед на пляже" class="card-img">
+          <div class="card-body">
+            <h3>Обед на пляже Янг Вей</h3>
+            <p>Уединённый пляж, морепродукты на костре, сёрфинг и отдых.</p>
+            <div class="card-footer">
+              <strong>от 1600 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 6 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?jeep,jungle" alt="Джип-сафари" class="card-img">
+          <div class="card-body">
+            <h3>Джип-сафари по джунглям</h3>
+            <p>Приключения на внедорожниках, водопады, местные деревни.</p>
+            <div class="card-footer">
+              <strong>от 2000 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 7 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?similan,islands" alt="Симilan Islands" class="card-img">
+          <div class="card-body">
+            <h3>Симilan Islands — день на лучшем пляже Азии</h3>
+            <p>Морская прогулка, сноркелинг, барбекю и белоснежный песок.</p>
+            <div class="card-footer">
+              <strong>от 2500 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Экскурсия 8 -->
+        <div class="card">
+          <img src="https://source.unsplash.com/random/400x250/?night,market" alt="Ночной рынок" class="card-img">
+          <div class="card-body">
+            <h3>Ночной рынок Пхукет-тауна</h3>
+            <p>Уникальные сувениры, уличная еда, живая музыка и атмосфера.</p>
+            <div class="card-footer">
+              <strong>Бесплатно (трансфер 500 ₽)</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Призыв к действию -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Не можете выбрать?</h2>
+      <p>Напишите нам — подберём экскурсию под ваш отдых!</p>
+      <a href="https://t.me/phuketholiday" class="btn btn-large" target="_blank">Написать в Telegram</a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <p>© 2025 PhuketHoliday. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
