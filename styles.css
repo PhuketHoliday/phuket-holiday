@@ -379,3 +379,31 @@ p {
     text-align: center;
   }
 }
+
+добавлено
+
+@media (max-width: 768px) {
+  .header .container {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .nav {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .nav-link {
+    margin: 0 10px;
+  }
+  .header-contact {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+ещё 
+
+.footer .logo-main {
+  color: white;
+}
