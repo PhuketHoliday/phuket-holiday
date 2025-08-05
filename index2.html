@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhuketHoliday — Лучшие экскурсии на Пхукете</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Full-screen hero с текстом на фото */
+    .hero-fullscreen {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('img/hero-beach.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Полупрозрачный слой для улучшения читаемости */
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(10, 42, 102, 0.6), rgba(10, 42, 102, 0.8));
+      z-index: 1;
+    }
+
+    /* Контент поверх фото */
+    .hero-content {
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .hero-content p {
+      font-size: 1.4rem;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    }
+
+    /* Анимация появления */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-content p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Хедер -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+
+      <!-- Бургер-меню -->
+      <button class="menu-toggle" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Навигация -->
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Главная</a>
+        <a href="tours.html" class="nav-link">Экскурсии</a>
+        <a href="about.html" class="nav-link">О нас</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+        <a href="https://t.me/phuketholiday" class="btn btn-small">Telegram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Главный экран — full-screen hero -->
+  <section class="hero-fullscreen">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Лучшие экскурсии на Пхукете</h1>
+      <p>Незабываемые туры по самым красивым местам Таиланда — от джунглей до коралловых островов</p>
+      <a href="tours.html" class="btn btn-large">Посмотреть экскурсии</a>
+    </div>
+  </section>
+
+  <!-- Популярные экскурсии -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Популярные экскурсии</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/tour-jungle.jpg" alt="Тон Сай и Рейнджеры" class="card-img">
+          <div class="card-body">
+            <h3>Тон Сай и Рейнджеры</h3>
+            <p>Посещение джунглей, водопадов и тропических островов. Обед включён.</p>
+            <div class="card-footer">
+              <strong>от 1500 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/tour-sailing.jpg" alt="Яхта на закате" class="card-img">
+          <div class="card-body">
+            <h3>Яхта на закате</h3>
+            <p>Романтическая прогулка на яхте с коктейлями и закатом.</p>
+            <div class="card-footer">
+              <strong>от 2200 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="img/tour-elephant.jpg" alt="Эко-ферма слонов" class="card-img">
+          <div class="card-body">
+            <h3>Эко-ферма слонов</h3>
+            <p>Без цепей и шоу. Кормление, купание и общение с животными.</p>
+            <div class="card-footer">
+              <strong>от 1800 ₽</strong>
+              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Отзывы туристов</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>«Отличная организация! Были на туре "Тон Сай" — всё чётко, гид говорил по-русски, транспорт комфортный.»</p>
+          <strong>— Анна, Москва</strong>
+        </div>
+        <div class="review">
+          <p>«Яхта на закате — магия! Спасибо за незабываемый вечер. Обязательно приедем ещё.»</p>
+          <strong>— Дмитрий, СПб</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма связи -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Остались вопросы?</h2>
+      <p>Напишите нам — поможем с выбором экскурсии и забронируем дату.</p>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Ваше имя" required />
+        <input type="text" id="contact" placeholder="Телефон или @ник в Telegram" required />
+        <textarea id="message" placeholder="Какая экскурсия вас интересует?"></textarea>
+      </form>
+      <div style="text-align: center; margin-top: 10px;">
+        <button type="button" class="btn btn-large" onclick="sendToTelegram()">
+          Написать в Telegram
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
+      </div>
+      <p>© 2025 PhuketHoliday. Все права защищены.</p>
+      <div class="footer-links">
+        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript: бургер-меню и отправка в Telegram -->
+  <script>
+    // Мобильное меню
+    document.addEventListener('DOMContentLoaded', function () {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.nav');
+
+      menuToggle?.addEventListener('click', function () {
+        nav.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+        });
+      });
+    });
+
+    // Отправка формы в Telegram
+    function sendToTelegram() {
+      const name = document.getElementById('name').value;
+      const contact = document.getElementById('contact').value;
+      const message = document.getElementById('message').value;
+
+      const text = `📩 Новая заявка!\nИмя: ${name}\nКонтакт: ${contact}\nСообщение: ${message}`;
+      const encoded = encodeURIComponent(text);
+      
+      window.open(`https://t.me/phuketholiday?text=${encoded}`, '_blank');
+    }
+  </script>
+
+</body>
+</html>
