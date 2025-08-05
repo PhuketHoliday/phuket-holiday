@@ -6,6 +6,81 @@
   <title>PhuketHoliday — Лучшие экскурсии на Пхукете</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Улучшенный герой-блок с одним фото */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5rem;
+      color: #0A2A66;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    /* Контейнер для фото */
+    .hero-image {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      transform: translateY(0);
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-out forwards;
+    }
+
+    /* Изображение */
+    .hero-img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Анимация появления */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0;
+      }
+      .hero-content {
+        margin-bottom: 30px;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -16,7 +91,7 @@
         <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
       </div>
       <nav class="nav">
-        <a href="index.html" class="nav-link">Главная</a>
+        <a href="index.html" class="nav-link active">Главная</a>
         <a href="tours.html" class="nav-link">Экскурсии</a>
         <a href="about.html" class="nav-link">О нас</a>
         <a href="contacts.html" class="nav-link">Контакты</a>
@@ -27,16 +102,15 @@
     </div>
   </header>
 
-  <!-- Главный баннер -->
+  <!-- Главный баннер с одним красивым фото -->
   <section class="hero">
     <div class="hero-content">
       <h1>Лучшие экскурсии на Пхукете</h1>
       <p>Незабываемые туры по самым красивым местам Таиланда — от джунглей до коралловых островов</p>
       <a href="tours.html" class="btn btn-large">Посмотреть экскурсии</a>
     </div>
-    <div class="hero-slider">
-      <!-- Локальное фото -->
-      <img src="img/hero-beach.jpg" alt="Пляж Пхукета" class="slider-img">
+    <div class="hero-image">
+      <img src="img/hero-beach.jpg" alt="Пляж Пхукета" class="hero-img">
     </div>
   </section>
 
@@ -60,71 +134,4 @@
           <img src="img/tour-sailing.jpg" alt="Яхта на закате" class="card-img">
           <div class="card-body">
             <h3>Яхта на закате</h3>
-            <p>Романтическая прогулка на яхте с коктейлями и закатом.</p>
-            <div class="card-footer">
-              <strong>от 2200 ₽</strong>
-              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="img/tour-elephant.jpg" alt="Эко-ферма слонов" class="card-img">
-          <div class="card-body">
-            <h3>Эко-ферма слонов</h3>
-            <p>Без цепей и шоу. Кормление, купание и общение с животными.</p>
-            <div class="card-footer">
-              <strong>от 1800 ₽</strong>
-              <a href="tour-detail.html" class="btn btn-small">Подробнее</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Отзывы -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Отзывы туристов</h2>
-      <div class="reviews">
-        <div class="review">
-          <p>«Отличная организация! Были на туре "Тон Сай" — всё чётко, гид говорил по-русски, транспорт комфортный.»</p>
-          <strong>— Анна, Москва</strong>
-        </div>
-        <div class="review">
-          <p>«Яхта на закате — магия! Спасибо за незабываемый вечер. Обязательно приедем ещё.»</p>
-          <strong>— Дмитрий, СПб</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Форма связи -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Остались вопросы?</h2>
-      <p>Напишите нам — поможем с выбором экскурсии и забронируем дату.</p>
-      <form class="contact-form">
-        <input type="text" placeholder="Ваше имя" required />
-        <input type="tel" placeholder="Телефон или @ник в Telegram" required />
-        <textarea placeholder="Какая экскурсия вас интересует?"></textarea>
-        <button type="submit" class="btn btn-large">Написать в Telegram</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Футер -->
-  <footer class="footer">
-    <div class="container">
-      <div class="logo">
-        <span class="logo-main">Phuket</span><span class="logo-accent">Holiday</span>
-      </div>
-      <p>© 2025 PhuketHoliday. Все права защищены.</p>
-      <div class="footer-links">
-        <a href="https://t.me/phuketholiday" target="_blank">Telegram</a>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+            <p>Романтическая прогулка на яхте с коктейля
