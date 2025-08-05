@@ -186,11 +186,24 @@
     </div>
   </footer>
 <script>
-  document.querySelector('.menu-toggle')?.addEventListener('click', function() {
-    document.querySelector('.nav').classList.toggle('active');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  menuToggle?.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    menuToggle.classList.toggle('active'); // Анимация бургера
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+      menuToggle.classList.remove('active');
+    });
   });
 </script>
 </body>
 
 </html>
+
 
