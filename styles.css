@@ -286,7 +286,7 @@ p {
 }
 
 .footer .logo-main {
-  color: white; /* Важно: белый для видимости на тёмном фоне */
+  color: white; /* Критично: белый цвет для видимости на тёмном фоне */
 }
 
 .footer .logo-accent {
@@ -315,12 +315,15 @@ p {
   .hero-content {
     margin-bottom: 30px;
   }
-
-  /* Мобильное меню */
-  .menu-toggle {
-    display: flex;
+  .hero-slider {
+    order: -1;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 20px;
   }
-
+  .slider-img {
+    height: 300px;
+  }
   .nav {
     display: none;
     flex-direction: column;
@@ -334,24 +337,25 @@ p {
     padding: 10px 0;
     z-index: 100;
   }
-
   .nav.active {
     display: flex;
   }
-
   .nav-link {
     margin: 8px 20px;
     font-size: 1.1rem;
   }
-
+  .menu-toggle {
+    display: flex;
+  }
   .header-contact {
     display: none;
   }
-
   .card {
     width: 100%;
   }
-
+  .section {
+    padding: 50px 0;
+  }
   .footer .container {
     flex-direction: column;
   }
